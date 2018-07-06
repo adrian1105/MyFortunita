@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Nuestra Fortuna</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your description">
+<meta name="keywords" content="Your keywords">
+<meta name="author" content="Your name">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/camera.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/touchTouch.css" type="text/css" media="screen">
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/superfish.js"></script>
+
+<script type="text/javascript" src="js/jquery.ui.totop.js"></script>
+<script type="text/javascript" src="js/camera.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.caroufredsel.js"></script>
+<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+
+<script type="text/javascript" src="js/touchTouch.jquery.js"></script>
+<script>
+$(document).ready(function() {
+	// camera
+	$('#camera_wrap').camera({
+		//thumbnails: true
+		height: '58%',
+		hover: false,
+		loader: 'none',
+		navigation: true,
+		pagination: false,
+		navigationHover: false,
+		mobileNavHover: false,
+		playPause: false,
+		pauseOnClick: false,
+		time: 7000,
+		transPeriod: 1500,
+		minHeight: '500px'
+	});
+
+	//	carouFredSel
+	$('.carousel.main ul').carouFredSel({
+		auto: {
+			timeoutDuration: 4000
+		},
+		responsive: true,
+		prev: '.prev',
+		next: '.next',
+		width: '100%',
+		scroll: {
+			items: 1,
+			duration: 1000,
+			easing: "easeOutExpo"
+		},
+		items: {
+        	width: '300',
+			height: 'auto',	//	optionally resize item-height
+			visible: {
+				min: 2,
+				max: 4
+			}
+		},
+		mousewheel: false,
+		swipe: {
+			onMouse: true,
+			onTouch: true
+			}
+	});
+	$(window).bind("resize",updateSizes_vat).bind("load",updateSizes_vat);
+	function updateSizes_vat(){
+		$('.carousel.main ul').trigger("updateSizes");
+	}
+	updateSizes_vat();
+
+
+
+	// touchTouch
+	$('.thumb-carousel .thumbnail a').touchTouch();
+
+}); //
+$(window).load(function() {
+
+
+
+}); //
+</script>
+<!--[if lt IE 8]>
+		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg"border="0"alt=""/></a></div>
+	<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+<![endif]-->
+</head>
+
+<body>
+<div id="main">
+
+<header>
+<div class="container">
+<div class="row">
+<div class="span12">
+<div class="top1">
+<div class="navbar navbar_">
+	<div class="navbar-inner navbar-inner_">
+		<a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</a>
+		<div class="nav-collapse nav-collapse_ collapse">
+			<div class="top2">
+				<br>
+				<p style="font-family:'Great Vibes'; font-weight:400; font-size:30px; color:#fff; line-height:50px; padding:0 0 20px 0; margin: 0 0 30px 0;">
+					Es imposible no estar triste... Tu ausencia duele pero tu recuerdo siempre nos hará soreir
+				</p>
+			</div>
+			<!-- <ul class="nav sf-menu clearfix">
+		  <li class="active"><a href="index.html">home page</a></li>
+		  <li><a href="index-1.html">Mi tesoro</a></li>
+		  <li><a href="index-3.html">Su tesoro</a></li>
+		  <li><a href="index-4.html">Su cumpleaños</a></li>
+					<li class="sub-menu sub-menu-1"><a href="index-2.html">Fotos</a>
+						<ul>
+							<li><a href="index-2.html">Familia</a></li>
+							<li class="sub-menu sub-menu-2"><a href="index-1.html">Fiestas<em></em></a>
+								<ul>
+									<li><a href="index-2.html">Navidad</a></li>
+									<li><a href="index-2.html">Cumpleaños</a></li>
+									<li><a href="index-2.html">Carnavales</a></li>
+									<li><a href="index-2.html">Paseos</a></li>
+								</ul>
+							</li>
+							<li><a href="index-1.html">Trabajo</a></li>
+						</ul>
+					</li>
+					<li><a href="index-5.html">Juegos</a></li>
+					<li><a href="index-5.html">Anecdotas</a></li>
+					<li><a href="index-5.html">Contactanos</a></li>
+		</ul> -->
+		</div>
+	</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</header>
+
+<div id="slider" class="clearfix">
+<div class="grad1"></div>
+<div id="camera_wrap">
+	<div data-src="images/carmen_slider1.jpg"></div>
+	<div data-src="images/carmen_slider2.jpg"></div>
+	<div data-src="images/carmen_slider3.jpg"></div>
+</div>
+</div>
+
+<div id="content">
+<div class="container">
+<div class="row">
+<div class="span12">
+	<div class="banners">
+		<div class="row">
+			<div class="span4 banner banner1">
+				<div class="banners_inner">
+					<div class="banners_inner2">
+						<div class="txt1">
+							Su familia
+						</div>
+						<div class="kand1"></div>
+						<img src="images/carmen_familia.jpg" alt="" class="img">
+						<div class="txt2">
+							Cuando tienes a alguien que amas en el cielo, tienes un pedacito de cielo en tu casa.
+						</div>
+						<a href="#" class="button0" onclick="return false">Leer más</a>
+					</div>
+				</div>
+			</div>
+			<div class="span4 banner banner1">
+				<div class="banners_inner">
+					<div class="banners_inner2">
+						<div class="txt1">
+							Personal
+						</div>
+						<div class="kand1"></div>
+						<img src="images/Carmen_personal.jpg" alt="" class="img">
+						<div class="txt2">
+							En días como hoy es cuando más te extraño y cuando más me hacen falta tus consejos.
+						</div>
+						<a href="#" class="button0" onclick="return false">Leer más</a>
+					</div>
+				</div>
+			</div>
+			<div class="span4 banner banner1">
+				<div class="banners_inner">
+					<div class="banners_inner2">
+						<div class="txt1">
+							Su trabajo
+						</div>
+						<div class="kand1"></div>
+						<img src="images/Carmen_trabajo.png" alt="" class="img">
+						<div class="txt2">
+							Madre aun me duele tu ausencia como el primer día en que te fuiste.
+						</div>
+						<a href="#" class="button0" onclick="return false">Leer más</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="intro">
+		<div class="row">
+			<div class="span4 block1">
+				<img src="images/carmen_about.jpg" alt="">
+				<div class="corner1"></div>
+			</div>
+			<div class="span8">
+				<div class="block2">
+					<div class="txt2">
+						Ella es mi madre, y aun esta con nosotros!
+					</div>
+					<div class="txt3">
+						<br>
+						Mi madre murió y hoy no está presente en mi vida, pero a ella le debo todos mis logros.
+						Fue ella la que me apoyo en los momentos difíciles, la que me alentó cuando nadie lo hizo y la que por mi entrego todo.
+						Mi madre merece el crédito por toda mi felicidad y la de mis hijos.
+						A ella van dedicados los versos en esta página y a otras madres como ella, que ahora descansan en paz en el cielo, después de haber luchado toda la vida por los suyos.
+						A todas ellas va nuestro recuerdo y homenaje.
+						<br>
+						<br>
+						En este lindo día de felicitaciones, flores, postales y homenajes, solo faltas tú.
+						El destino quiso que te fueras y no estuvieras a nuestro lado, pero nada ni nadie podrá
+						arrancarte de nuestros corazones, en los que estará para siempre tu recuerdo y memoria.
+						Felicidades para ti Mamá, allá en el cielo, en la gloria o donde sea que estés.
+					</div>
+					<!-- <div class="text-right"><a href="#" class="button1">LEER MÁS</a></div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="slider2">
+	<div class="carousel-title">Galeria</div>
+	<a class="prev" href="#"></a>
+	<a class="next" href="#"></a>
+	<div class="carousel-box row">
+		<div class="inner span12">
+			<div class="carousel main">
+				<ul>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria1.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria1.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria2.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria2.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria3.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria3.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria4.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria4.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria5.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria5.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria6.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria6.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria8.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria8.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria9.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria9.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria10.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria10.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria11.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria11.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria12.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria12.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="thumb-carousel">
+							<div class="thumbnail clearfix">
+								<a href="images/galeria_home/carmem_galeria13.jpg">
+									<figure>
+										<img src="images/galeria_home/mini/carmem_galeria13.jpg" alt=""><em></em>
+									</figure>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="container">
+<div class="row">
+<div class="span12">
+	<div class="bot clearfix">
+	<div class="bot1">
+	<p style="font-family:'Great Vibes'; font-weight:400; font-size:30px; color:#fff; line-height:50px; padding:0 0 20px 0; margin: 0 0 30px 0;">
+		"Los que mueren por la vida no pueden llamarse muertos". Ali
+	</p>
+	</div>
+	<div class="bot2 clearfix">
+		<div class="phone1"></div>
+		<div class="social_wrapper">
+			<ul class="social clearfix">
+			    <li class="nav1"><a href="#" onclick="return false;"><img src="images/social_ic1.png"></a></li>
+			    <li class="nav2"><a href="#" onclick="return false;"><img src="images/social_ic2.png"></a></li>
+			    <li class="nav3"><a href="#" onclick="return false;"><img src="images/social_ic3.png"></a></li>
+			    <li class="nav4"><a href="#" onclick="return false;"><img src="images/social_ic4.png"></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="copyright container text-center">
+	Copyright © 2018 A.G All rights reserved.
+	<a href="#" onclick="openmodal_sede();"></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Modal modal_reporte_movimientos -->
+  <div class="modal fade" id="modalInicio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+					<video autoplay src="videos/Cumpleaños Carmen.mp4" style="width:520px;" controls>
+						Tu navegador no implementa el elemento <code>video</code>.
+					</video>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="closemodal();">
+    				Cancelar
+    			</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+</div>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script>
+	$(document).ready(function()
+	{
+	  $("#modalInicio").modal("show");
+		$('html,body').css('overflow', 'hidden');
+	});
+	function closemodal(){
+		$("#modalInicio").modal("hide");
+		$('html,body').css('overflow', 'visible');
+	}
+</script>
+</body>
+</html>
